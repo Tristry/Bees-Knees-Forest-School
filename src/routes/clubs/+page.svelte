@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { cn } from '$lib';
 	import { CLUBS } from '../../data/clubs';
 	import Button from '$lib/components/Button.svelte';
 </script>

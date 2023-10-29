@@ -1,13 +1,14 @@
 interface Club {
     id: string;
     title: string;
-    highlightedWord: string;
     description: string;
     image: string;
     termHighlights: TermHighlight[];
     primaryColor: string;
     secondaryColor: string;
     termFinale: string;
+    days: string[];
+    price: number;
 }
 
 interface TermHighlight {
@@ -19,7 +20,6 @@ export let CLUBS: Club[] = [
     {
         id: "bushcraft",
         title: "Bushcraft Adventures After-School Club",
-        highlightedWord: "Bushcraft",
         description: "Calling all young adventurers and nature lovers! Get ready for a journey of a lifetime as we dive headfirst into the heart of the forest. \"Bushcraft Adventures\" isn't your average after-school club - it's a thrilling wilderness extravaganza that will transform you into a trailblazing explorer. Imagine building your own forest hideaways, mastering the art of orienteering, and cooking up mouthwatering campfire feasts. From tracking wildlife to navigating like a pro, this is where you'll discover the secrets of the wild, make lifelong friends, and ignite your love for nature like never before. Parents, prepare for your child to become a confident, capable, and wild-at-heart adventurer. Kids, get ready to uncover, create, and explore in the most exciting way possible. Enrol today, and let the forest fun begin!",
         image: "https://cdn.midjourney.com/f985cc34-6a4f-4845-9837-7fc051946ff4/0_0.png",
         termHighlights: [
@@ -56,6 +56,12 @@ export let CLUBS: Club[] = [
                 description: "Encourage mindfulness and awareness of the environment. Students will engage in sensory activities, sit-spots, and nature journaling to connect deeply with the forest and its inhabitants.",
             }
         ],
+        days: [
+            'Monday at 3PM',
+            'Tuesday at 3PM',
+            'Wednesday at 3PM',
+        ],
+        price: 289,
         termFinale: 'At the end of the term, our young bushcraft experts will put their skills to the test in a wilderness adventure. They\'ll navigate to a chosen location, build their shelters, and cook their meals over open fires. It\'s a chance to showcase their newfound abilities and create lasting memories of their bushcraft journey.<br /><br />Join us for a term of thrilling outdoor education, where kids will become confident and skilled in the art of bushcraft, all while fostering a deep appreciation for the natural world. Enrol your child today and let them embark on a journey of discovery, adventure, and self-reliance in the heart of the forest!',
         primaryColor: "#693a2b",
         secondaryColor: "#FFA88C",
@@ -63,7 +69,6 @@ export let CLUBS: Club[] = [
     {
         id: "nature-explorers",
         title: "Nature Explorers After-School Club",
-        highlightedWord: "Nature Explorers",
         description: "Calling all young adventurers! Dive into the world of nature right within our school's outdoor sanctuary with \"Nature Explorers After-School Club.\" Designed for ages 8-12, this exciting program takes students on a journey of discovery, from unravelling the mysteries of climate change to nurturing eco-friendly practices in our outdoor space. With hands-on exploration, creative projects, mini eco-experiments, and outdoor adventures, your child will become an environmental champion, showcasing their eco-initiatives to the school community. Enrol today and let your child be part of an inspiring mission to connect with and protect our precious environment, right in our school's backyard!",
         image: "https://cdn.midjourney.com/ad3d4b5c-911f-46a2-bbba-2af199871ded/0_1.webp",
         termHighlights: [
@@ -100,6 +105,12 @@ export let CLUBS: Club[] = [
                 description: "We'll make the most of our outdoor facilities with guided hikes, bird-watching, and other nature-related activities that foster a deep connection to the environment...",
             },
         ],
+        days: [
+            'Monday at 3PM',
+            'Tuesday at 3PM',
+            'Wednesday at 3PM',
+        ],
+        price: 300,
         termFinale:"At the end of the term, our Nature Explorers will present their findings and eco-friendly initiatives to the school community. They'll showcase how even within our limited outdoor space, positive changes can be made to benefit our environment.<br /><br />Join us for a term of exploration, education, and action as we utilise our school's outdoor facilities to instil a sense of environmental responsibility and appreciation for the world around us. Enrol your child today and be part of our mission to create environmentally conscious students within our own school's outdoor realm!",
         primaryColor: "#374b35",
         secondaryColor: "#DAE69F",
@@ -107,7 +118,6 @@ export let CLUBS: Club[] = [
     {
         id: "tools-tinkerers",
         title: "Tool Tinkerers After-School Club",
-        highlightedWord: "Tool Tinkerers",
         description: "Get ready to ignite your child's inner builder and adventurer with the \"Tool Tinkerers After-School Club\"! Designed for budding creators aged 8-12, this electrifying program unfolds in the secure outdoor spaces of our school, offering a thrilling journey of discovery through hands-on tool exploration and outdoor crafting. From wielding hammers and saws to crafting birdhouses, sculpting natural art, and tackling mini construction challenges, your child will unleash their creativity and master essential life skills while having a blast. Safety, craftsmanship, and the wonders of nature converge in a dynamic outdoor classroom where every week is a new adventure. Join us and watch your child's imagination come to life in a world of tools, teamwork, and endless fun!",
         image: "https://cdn.midjourney.com/5ac225e7-679b-443c-abe3-e04a5a32d873/0_2.webp",
         termHighlights: [
@@ -144,6 +154,12 @@ export let CLUBS: Club[] = [
                 description: "Throughout the term, students will also have time for exploration and appreciation of the natural world within our school grounds. They'll learn about local plants, insects, and wildlife, fostering a deeper connection to nature.",
             },
         ],
+        days: [
+            'Monday at 3PM',
+            'Tuesday at 3PM',
+            'Wednesday at 3PM',
+        ],
+        price: 310,
         termFinale: "At the end of the term, our Tool Tinkerers will proudly showcase their creations during an outdoor exhibition. Families and peers will be invited to admire the projects and witness the skills and creativity that have blossomed during the term.<br /><br />Join us for a term of discovery, craftsmanship, and outdoor adventure, all while learning how to safely and responsibly use outdoor tools. Enrol your child today and be part of our Tool Tinkerers, where creativity and outdoor learning go hand in hand!",
         primaryColor: "#5b4c3f",
         secondaryColor: "#DDC0A6",
@@ -151,7 +167,6 @@ export let CLUBS: Club[] = [
     {
         id: "nature-explorers-mini",
         title: "Nature Explorers Mini Club",
-        highlightedWord: "Nature Explorers Mini",
         description: "Calling all young adventurers aged 5-7 and their parents - get ready for a wild and wonderful journey into the great outdoors with our \"Nature Explorers Mini Club\"! Designed to spark curiosity and wonder, this thrilling program invites our littlest explorers to dive headfirst into the natural world right within the safe and nurturing embrace of our school's outdoor spaces. From exciting scavenger hunts and animal tracking to captivating outdoor storytime and hands-on nature art, your child will embark on a magical adventure of discovery, creativity, and outdoor play. Join us, and watch as your child's love for nature blossoms in a world of outdoor fun, picnics, and unforgettable celebrations!",
         image: "https://cdn.midjourney.com/51fc633b-61eb-4d2c-a8c8-0aa5708b21ac/0_2.webp",
         termHighlights: [
@@ -188,6 +203,12 @@ export let CLUBS: Club[] = [
                 description: "Embracing the great outdoors, we'll have picnics in our school's outdoor spaces. Children will enjoy simple, healthy snacks while connecting with nature and each other.",
             },
         ],
+        days: [
+            'Monday at 3PM',
+            'Tuesday at 3PM',
+            'Wednesday at 3PM',
+        ],
+        price: 320,
         termFinale:"At the end of the term, our Nature Explorers Mini Club will host a nature-themed celebration, where students will showcase their favourite discoveries and creations from the term. Families and friends are invited to join in the fun and share in the wonder of young exploration.<br /><br />Join us for a term of outdoor discovery and play, specially crafted for our youngest nature enthusiasts. Enrol your child today and let them experience the joy of exploring and connecting with the natural world right here at school!",
         primaryColor: '#493800',
         secondaryColor: '#FFF9AC',

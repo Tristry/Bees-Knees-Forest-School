@@ -1,7 +1,3 @@
-# HOW TO EDIT THE DATA
-
-ALL THE EDITABLE DATA IS IN THE src/data folder
-
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).

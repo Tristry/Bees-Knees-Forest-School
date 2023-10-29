@@ -67,7 +67,7 @@
 							{professional.name}
 						</h1>
 						<p
-							class="leading-7 opacity-90 max-md:text-sm max-md:leading-6 line-clamp-[12]"
+							class="leading-7 opacity-90 max-md:text-sm max-md:leading-6"
 							style={`color: ${professional.primaryColor};`}
 						>
 							{@html professional.description}
