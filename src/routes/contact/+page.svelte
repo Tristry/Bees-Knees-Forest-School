@@ -47,7 +47,7 @@
 <section id="contact" class="flex -mb-10 max-md:mb-0 max-md:container h-[calc(100vh-64px)] gap-10">
 	<div class="w-1/2 max-md:hidden">
 		<img
-			src="https://cdn.midjourney.com/3a37b3cf-f72e-476f-8c2c-89d03b7488d2/0_0.png"
+			src="https://res.cloudinary.com/dk8kuqbbc/image/upload/v1698693970/contact.webp"
 			alt=""
 			class="w-full h-full object-cover"
 		/>
