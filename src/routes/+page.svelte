@@ -2,8 +2,11 @@
 	import Button from '$lib/components/Button.svelte';
 	import FeaturesCard from '$lib/components/FeaturesCard.svelte';
 	import Accordian from '$lib/components/Accordian.svelte';
+	import * as AlertDialog from '$lib/components/ui/alert-dialog';
 	import { FAQ } from '../data/faq';
 	import Input from '$lib/components/ui/Input/Input.svelte';
+	import { enhance } from '$app/forms';
+	import { Check, Loader2 } from 'lucide-svelte';
 	const features = [
 		{
 			name: 'Risk Assessment',
@@ -55,6 +58,8 @@
 			image: 'https://cdn.midjourney.com/50793d7b-576d-4cb6-8f68-7b75f74c9c92/0_3.webp'
 		}
 	];
+	let isSubmitting = false;
+	let showSuccessMessage = false;
 </script>
 
 <section class="h-[80vh] relative overflow-hidden z-0">
@@ -141,10 +146,50 @@
 				Join our newsletter and receive the latest news, tips, and exclusive offers directly in your
 				inbox. Enter your email below and hit subscribe now!
 			</p>
-			<div class="flex gap-4 max-md:flex-col max-md:gap-2">
-				<Input class="border-[#374b35]" placeholder="Enter your email" />
-				<Button variant="PRIMARY">Subscribe</Button>
-			</div>
+			<form
+				action=""
+				method="POST"
+				use:enhance={({ formElement, formData, action, cancel, submitter }) => {
+					isSubmitting = true;
+					if (!formData.get('email')) {
+						isSubmitting = false;
+						return alert('Please enter an email');
+					}
+					return async ({ result, update }) => {
+						isSubmitting = false;
+						showSuccessMessage = true;
+					};
+				}}
+				class="flex gap-4 items-center max-md:flex-col max-md:gap-2"
+			>
+				<Input name="email" type="email" class="border-[#374b35]" placeholder="Enter your email" />
+				<Button
+					variant="PRIMARY"
+					disabled={isSubmitting}
+					style={`display:flex; justify-content:center; align-items-center;`}
+				>
+					{#if isSubmitting}
+						<Loader2 class="mr-2 h-4 w-4 mt-[2px] animate-spin" />
+					{/if}
+					Subscribe
+				</Button>
+			</form>
 		</div>
 	</div>
 </section>
+<AlertDialog.Root open={showSuccessMessage}>
+	<AlertDialog.Content>
+		<AlertDialog.Header>
+			<AlertDialog.Title class="flex items-center">
+				<Check class="h-4 w-4 mr-2" />
+				<p>Message sent successfully</p>
+			</AlertDialog.Title>
+			<AlertDialog.Description
+				>We have recieved your message. We will get back to you shortly</AlertDialog.Description
+			>
+		</AlertDialog.Header>
+		<AlertDialog.Footer>
+			<AlertDialog.Cancel>Close</AlertDialog.Cancel>
+		</AlertDialog.Footer>
+	</AlertDialog.Content>
+</AlertDialog.Root>
