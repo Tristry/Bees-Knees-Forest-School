@@ -137,7 +137,10 @@
 	<div class="w-full h-[500px] max-md:h-[250px] max-md:mt-5 rounded-lg overflow-hidden">
 		<img
 			class="w-full h-full object-cover"
-			src="https://cdn.midjourney.com/77a95005-908f-49b1-a4b3-2298541b9ee5/0_2.webp"
+			srcset="https://res.cloudinary.com/dk8kuqbbc/image/upload/f_auto/q_auto/v1698693569/Forest%20school.webp 1024w,
+			https://res.cloudinary.com/dk8kuqbbc/image/upload/w_650,h_364/f_auto/q_auto/v1698693569/Forest%20school.webp 640w,
+			https://res.cloudinary.com/dk8kuqbbc/image/upload/w_320,h_179/f_auto/q_auto/v1698693569/Forest%20school.webp  320w"
+			src="https://res.cloudinary.com/dk8kuqbbc/image/upload/v1698693569/Forest%20school.webp"
 			alt=""
 		/>
 	</div>
