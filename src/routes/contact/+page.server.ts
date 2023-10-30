@@ -23,6 +23,7 @@ export const actions = {
             console.log(data)
             return { success: true }
         } catch (err) {
+            console.log(err)
             return { success: false }
         }
     }
