@@ -18,6 +18,7 @@
 
 	const sendMessage = async () => {
 		try {
+			isSubmitting = true;
             let url = `https://us21.list-manage.com/contact-form/post?u=b332e3f7e0a8487342bdb97bf&form_id=617d131f5880390b8b64872ccc6ca01f`
             const contactData = {
                 fields: {
@@ -36,9 +37,11 @@
 				mode: 'no-cors',
                 body: JSON.stringify(contactData)
             })
+			isSubmitting = false;
+			showSuccessMessage = true;
             return { success: true }
         } catch (err) {
-            console.log(err)
+            isSubmitting = false;
             return { success: false }
         }
 	}

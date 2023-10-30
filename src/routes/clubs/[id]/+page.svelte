@@ -13,13 +13,14 @@
 
 	const id = $page.params.id;
 	$: club = CLUBS.find((club) => club.id.toLowerCase() == id.toLowerCase());
+
 	if (!club) {
 	}
 	let day: string = '';
 	let school: string = '';
+	let children = 1;
 	$: successAlertOpen = $page.url.searchParams.get('paymentSuccess');
 	$: failureAlertOpen = $page.url.searchParams.get('paymentFailure');
-
 </script>
 
 {#if club}
@@ -57,14 +58,18 @@
 				style={`background-color:${club?.secondaryColor}`}
 				class="w-2/5 max-w-[350px] mt-4 rounded-lg h-full space-y-2 border p-4 max-md:w-full"
 			>
-				<p class="mb-2" style={`color:${club?.primaryColor}`}>Club Details</p>
+				<p class="mb-2 text-lg" style={`color:${club?.primaryColor}`}>Club Details</p>
 				<div class="space-y-2">
 					<Label style={`color:${club?.primaryColor}`} for="school">School</Label>
-					<Select.Root onSelectedChange={(item) => (school = item?.label || '')}>
+					<Select.Root
+						
+						onSelectedChange={(item) => (school = item?.label || '')}
+					>
 						<Select.Trigger
 							type="button"
 							style={`border:1px solid ${club?.primaryColor}`}
 							class="rounded-full py-5 "
+							bind:value={school}
 						>
 							<Select.Value placeholder="Pick a school" />
 						</Select.Trigger>
@@ -99,8 +104,18 @@
 						name="children"
 						placeholder="Number of children"
 						type="number"
+						bind:value={children}
 						min={1}
 					/>
+				</div>
+				<div class="flex justify-between py-3">
+					<p style={`color:${club?.primaryColor}`}>Total</p>
+					<p style={`color:${club?.primaryColor}.; font-weight:bold;`}>
+						{Intl.NumberFormat('en-US', { style: 'currency', currency: 'GBP' }).format(
+							(CLUBS.find((club) => club.title.toLowerCase().trim() == school.toLowerCase().trim())?.price ||
+								0) * (children > 0 ? children : 0)
+						)}
+					</p>
 				</div>
 				<Button
 					disabled={isSubmitting}
@@ -157,9 +172,7 @@
 				<Check class="h-4 w-4 mr-2" />
 				<p>Payment Successful</p>
 			</AlertDialog.Title>
-			<AlertDialog.Description>
-				Your payment has been successful
-			</AlertDialog.Description>
+			<AlertDialog.Description>Your payment has been successful</AlertDialog.Description>
 		</AlertDialog.Header>
 		<AlertDialog.Footer>
 			<AlertDialog.Cancel>Close</AlertDialog.Cancel>
@@ -174,9 +187,7 @@
 				<X class="h-4 w-4 mr-2" />
 				<p>Payment Unsuccessful</p>
 			</AlertDialog.Title>
-			<AlertDialog.Description>
-				Your payment has been unsuccessful
-			</AlertDialog.Description>
+			<AlertDialog.Description>Your payment has been unsuccessful</AlertDialog.Description>
 		</AlertDialog.Header>
 		<AlertDialog.Footer>
 			<AlertDialog.Cancel>Close</AlertDialog.Cancel>

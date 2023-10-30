@@ -59,6 +59,7 @@ export let CLUBS: Club[] = [
         days: [
             'Monday at 3PM',
             'Tuesday at 3PM',
+            'Wednesday at 3PM',
         ],
         price: 289,
         termFinale: 'At the end of the term, our young bushcraft experts will put their skills to the test in a wilderness adventure. They\'ll navigate to a chosen location, build their shelters, and cook their meals over open fires. It\'s a chance to showcase their newfound abilities and create lasting memories of their bushcraft journey.<br /><br />Join us for a term of thrilling outdoor education, where kids will become confident and skilled in the art of bushcraft, all while fostering a deep appreciation for the natural world. Enrol your child today and let them embark on a journey of discovery, adventure, and self-reliance in the heart of the forest!',
