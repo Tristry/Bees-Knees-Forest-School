@@ -19,8 +19,7 @@ export const actions = {
                 },
                 body: JSON.stringify(contactData)
             })
-            const data = await res.json()
-            console.log(data)
+            console.log("SUCCESS")
             return { success: true }
         } catch (err) {
             console.log(err)
