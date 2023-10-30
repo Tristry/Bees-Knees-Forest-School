@@ -19,7 +19,7 @@ interface TermHighlight {
 export let CLUBS: Club[] = [
     {
         id: "bushcraft",
-        title: "Bushcraft Adventures After-School Club",
+        title: "Bushcraft Adventures After-School Clubs",
         description: "Calling all young adventurers and nature lovers! Get ready for a journey of a lifetime as we dive headfirst into the heart of the forest. \"Bushcraft Adventures\" isn't your average after-school club - it's a thrilling wilderness extravaganza that will transform you into a trailblazing explorer. Imagine building your own forest hideaways, mastering the art of orienteering, and cooking up mouthwatering campfire feasts. From tracking wildlife to navigating like a pro, this is where you'll discover the secrets of the wild, make lifelong friends, and ignite your love for nature like never before. Parents, prepare for your child to become a confident, capable, and wild-at-heart adventurer. Kids, get ready to uncover, create, and explore in the most exciting way possible. Enrol today, and let the forest fun begin!",
         image: "https://res.cloudinary.com/dk8kuqbbc/image/upload/v1698693452/Bushcraft.webp",
         termHighlights: [
