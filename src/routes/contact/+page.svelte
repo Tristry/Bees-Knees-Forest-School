@@ -9,9 +9,39 @@
 
 	let isSubmitting = false;
 	let message = '';
+	let email = ''
+	let phone = ''
+	let fullName = ''
 	$: console.log(message.length);
 	$: messageLength = message.length;
 	let showSuccessMessage = false;
+
+	const sendMessage = async () => {
+		try {
+            let url = `https://us21.list-manage.com/contact-form/post?u=b332e3f7e0a8487342bdb97bf&form_id=617d131f5880390b8b64872ccc6ca01f`
+            const contactData = {
+                fields: {
+                    1501: email,
+                    1504: fullName,
+                    1505: phone,
+                    1503: message
+                },
+                subscribe: false
+            }
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+				mode: 'no-cors',
+                body: JSON.stringify(contactData)
+            })
+            return { success: true }
+        } catch (err) {
+            console.log(err)
+            return { success: false }
+        }
+	}
 </script>
 
 <section id="contact" class="flex -mb-10 max-md:mb-0 max-md:container h-[calc(100vh-64px)] gap-10">
@@ -30,32 +60,20 @@
 				emailing us at email@gmail.com
 			</p>
 			<form
-				action=""
-				use:enhance={({ formElement, formData, action, cancel, submitter }) => {
-					isSubmitting = true;
-					if (!formData.get('email')) return alert('Please enter an email');
-					if (!formData.get('message')) return alert('Please enter a message');
-					if (message.length >= 800)
-						return alert('The message must not be bigger than 800 characters');
-					return async ({ result, update }) => {
-						isSubmitting = false;
-						showSuccessMessage = true;
-					};
-				}}
-				method="POST"
+				on:submit|preventDefault={sendMessage}
 				class="space-y-4 mt-2"
 			>
 				<div class="space-y-2">
 					<Label for="fullName">Full Name</Label>
-					<Input type="text" name="fullName" placeholder="Enter your full name here" />
+					<Input bind:value={fullName} type="text" name="fullName" placeholder="Enter your full name here" />
 				</div>
 				<div class="space-y-2">
 					<Label for="email">Email*</Label>
-					<Input type="email" name="email" required placeholder="Enter your email address here" />
+					<Input bind:value={email} type="email" name="email" required placeholder="Enter your email address here" />
 				</div>
 				<div class="space-y-2">
 					<Label for="phone">Phone</Label>
-					<Input type="tel" name="phone" placeholder="Enter your phone number here" />
+					<Input bind:value={phone} type="tel" name="phone" placeholder="Enter your phone number here" />
 				</div>
 				<div class="space-y-2">
 					<Label for="message">Message</Label>
