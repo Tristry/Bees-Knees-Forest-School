@@ -12,50 +12,50 @@
 			name: 'Risk Assessment',
 			description:
 				'We encourage kids to make their own risk assessments with minimal adult interference which allows children the space and time to develop natural problem solving skills. We foster a sense of responsibility and judgement that can benefit them in various aspects of life.',
-			image: 'https://res.cloudinary.com/dk8kuqbbc/image/upload/f_auto/q_auto/v1698686600/Risk%20Assessment.webp'
+			image: 'https://res.cloudinary.com/dk8kuqbbc/image/upload/w_893,h_500/f_auto/q_auto/v1698686600/Risk%20Assessment.webp'
 		},
 		{
 			name: 'Curiosity and Learning',
 			description:
 				'By nurturing curiosity, our clubs help children become curious learners for life, promoting a thirst for knowledge that goes beyond the classroom.',
-			image: 'https://res.cloudinary.com/dk8kuqbbc/image/upload/f_auto/q_auto/v1698686022/Curiosity%20and%20Learning.webp'
+			image: 'https://res.cloudinary.com/dk8kuqbbc/image/upload/w_700,h_700/f_auto/q_auto/v1698686022/Curiosity%20and%20Learning.webp'
 		},
 		{
 			name: 'Physical Development',
 			description:
 				'Our clubs support the development of stronger physical abilities in children through outdoor activities, promoting health and well-being.',
-			image: 'https://res.cloudinary.com/dk8kuqbbc/image/upload/f_auto/q_auto/v1698686350/Physical%20Development.webp'
+			image: 'https://res.cloudinary.com/dk8kuqbbc/image/upload/w_700,h_700/f_auto/q_auto/v1698686350/Physical%20Development.webp'
 		},
 		{
 			name: 'Emotional Resilience',
 			description:
 				'The outdoor setting allows children to develop emotional resilience by navigating the challenges and uncertainties of the natural world, helping them build inner strength.',
-			image: 'https://res.cloudinary.com/dk8kuqbbc/image/upload/f_auto/q_auto/v1698686091/Emotional%20Resilience.webp'
+			image: 'https://res.cloudinary.com/dk8kuqbbc/image/upload/w_700,h_700/f_auto/q_auto/v1698686091/Emotional%20Resilience.webp'
 		},
 
 		{
 			name: 'Effective Communication',
 			description:
 				'Children attending our clubs become more effective communicators as they learn to express themselves in a diverse and interactive outdoor environment, improving their social skills.',
-			image: 'https://res.cloudinary.com/dk8kuqbbc/image/upload/f_auto/q_auto/v1698686061/Effective%20Communication.webp'
+			image: 'https://res.cloudinary.com/dk8kuqbbc/image/upload/w_700,h_700/f_auto/q_auto/v1698686061/Effective%20Communication.webp'
 		},
 		{
 			name: 'Self-Confidence',
 			description:
 				'Participation in our clubs can boost a childs self-confidence, as they conquer outdoor challenges and gain a sense of accomplishment.',
-			image: 'https://res.cloudinary.com/dk8kuqbbc/image/upload/f_auto/q_auto/v1698686604/Self%20Confidence.webp'
+			image: 'https://res.cloudinary.com/dk8kuqbbc/image/upload/w_700,h_700/f_auto/q_auto/v1698686604/Self%20Confidence.webp'
 		},
 		{
 			name: 'Sensory Learning',
 			description:
 				'Our approach and clubs engage childrens senses - research has proven that information acquired through the use of all our senses leads to knowledge being ingrained rather than simply retained for a short period of time.',
-			image: 'https://res.cloudinary.com/dk8kuqbbc/image/upload/f_auto/q_auto/v1698686605/Sensory%20Learning.webp'
+			image: 'https://res.cloudinary.com/dk8kuqbbc/image/upload/w_893,h_500/f_auto/q_auto/v1698686605/Sensory%20Learning.webp'
 		},
 		{
 			name: 'Learning Through Play',
 			description:
 				'Our approach emphasises learning through play, which helps children engage with their environment in a fun and meaningful way, promoting a positive attitude toward learning in all stages of life',
-			image: 'https://res.cloudinary.com/dk8kuqbbc/image/upload/f_auto/q_auto/v1698686176/Learning%20Through%20Play.webp'
+			image: 'https://res.cloudinary.com/dk8kuqbbc/image/upload/w_700,h_700/f_auto/q_auto/v1698686176/Learning%20Through%20Play.webp'
 		}
 	];
 	let isSubmitting = false;
@@ -66,8 +66,7 @@
 	<div class="w-full h-full overflow-hidden">
 		<img
 			src="https://res.cloudinary.com/dk8kuqbbc/image/upload/f_auto/q_auto/v1698688020/Home%20page%20banner.webp"
-			alt=""
-			loading="lazy"
+			alt="banner"
 			class="w-full h-full object-cover"
 		/>
 		<div class="absolute top-0 z-10 bg-black/50 h-[100vh] w-full transition-all" />

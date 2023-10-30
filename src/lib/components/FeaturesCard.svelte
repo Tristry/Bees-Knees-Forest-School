@@ -8,7 +8,7 @@
 	<div
 		class="w-full h-full rounded-lg overflow-hidden md:group-hover:h-1/2 max-md:h-[250px] transition-all duration-500"
 	>
-		<img src={image} alt="" class="w-full h-full object-cover" />
+		<img loading="lazy" src={image} alt={title} class="w-full h-full object-cover" />
 	</div>
 	<div class="w-full h-1/2 relative -mt-16 group-hover:mt-0 max-md:mt-0 max-md:h-fit transition-mt duration-500">
 		<div
