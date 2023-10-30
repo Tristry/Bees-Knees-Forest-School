@@ -1,10 +1,6 @@
-import { MAILCHIMP_API_KEY } from '$env/static/private'
-
-
 export const actions = {
     default: async ({ request }: any) => {
         try {
-            console.log("HERE")
             const formData = await request.formData()
             let url = `https://us21.list-manage.com/contact-form/post?u=b332e3f7e0a8487342bdb97bf&form_id=617d131f5880390b8b64872ccc6ca01f`
             const contactData = {
@@ -24,6 +20,7 @@ export const actions = {
                 body: JSON.stringify(contactData)
             })
             const data = await res.json()
+            console.log(data)
             return { success: true }
         } catch (err) {
             return { success: false }
