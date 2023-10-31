@@ -1,36 +1,11 @@
 <script lang="ts">
-	const policies = [
-		{
-			title: 'Behavior Policy',
-			link: '/policy/behavior'
-		},
-		{
-			title: 'Health and safety policy',
-			link: '/policy/safeguarding'
-		},
-		{
-			title: 'Safer recruitment policy',
-			link: '/policy/health-and-safety'
-		},
-		{
-			title: 'Safeguarding policy - ratios, roles and responsibilities',
-			link: '/policy/complaints'
-		},
-		{
-			title: 'Risk assessment policy',
-			link: '/policy/privacy'
-		},
-		{
-			title: 'Working with tools / bushcraft and fire tools policy',
-			link: '/policy/terms-and-conditions'
-		}
-	];
+	import { POLICIES } from "../../data/policies";
 </script>
 
 <section class="container min-h-[514px] py-3">
 	<h1 class="text-3xl leading-[50px] max-md:text-2xl">Policies</h1>
 	<div class="grid grid-cols-3 max-md:grid-cols-1 gap-3 mt-3">
-		{#each policies as policy}
+		{#each POLICIES as policy}
 			<a href={policy.link}>
 				<div class="w-full max-md:text-sm flex items-center justify-between hover:border-[#054900] border-2 border-transparent transition-all h-full p-4 bg-[#BFFFBA] text-[#054900] rounded-lg">
 					{policy.title}
