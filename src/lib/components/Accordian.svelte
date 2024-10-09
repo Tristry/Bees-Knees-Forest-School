@@ -26,7 +26,7 @@
 		</svg>
 		<p class="text-[#442921]">{title}</p>
 	</div>
-	<div class={`bg-[#ECEAE942] w-full transition-all ease-in-out duration-500 overflow-hidden px-4 ${expanded ? "max-h-[500px] py-2" : "max-h-0 py-0"}`}>
+	<div class={`bg-[#ECEAE942] w-full transition-all ease-in-out duration-500 overflow-hidden px-4 ${expanded ? "max-h-[800px] py-2" : "max-h-0 py-0"}`}>
 		<p class="text-sm leading-6 text-[#442921]">
 			{@html content}
 		</p>

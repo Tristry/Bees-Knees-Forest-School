@@ -1,4 +1,4 @@
-export const showTestimonials = true;
+export const showTestimonials = false;
 export const testimonials = [
     {
         name: 'John Doe',

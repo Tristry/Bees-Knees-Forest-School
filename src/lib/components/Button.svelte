@@ -2,8 +2,6 @@
 	export let variant = 'PRIMARY';
 	export let classname = '';
 	export let style = ''
-	export let onClick = () => {};
-	export let disabled = false;
 	const variants: any = {
 		PRIMARY: 'bg-[#374b35] rounded-full py-[12px] px-5 cursor-pointer text-[#FFFFFF] text-sm hover:bg-[#374b35DD] transition-all',
 		WHITE: 'bg-white rounded-full py-[6px] px-2 cursor-pointer text-secondary-foreground text-sm transition-all',
@@ -12,7 +10,6 @@
 	};
 </script>
 
-<button disabled={disabled} on:click={onClick} class={`rounded-full cursor-pointer ${variants[variant]} ${classname}`} style={style}>
-
+<button class={`rounded-full cursor-pointer ${variants[variant]} ${classname}`} style={style}>
 	<slot />
 </button>

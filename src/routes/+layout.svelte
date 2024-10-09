@@ -4,11 +4,8 @@
 	import '../app.postcss';
 </script>
 
-<svelte:head>
-    <title>Bee's Knees Forest School</title> 
-</svelte:head>
 <Header />
-<div class="mt-16 min-h-[calc(100vh-64px-377px)]">
+<div class="mt-16 min-h-[calc(100vh-64px-377px)] space-y-16">
 	<slot />
 </div>
 <Footer />

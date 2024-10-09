@@ -1,20 +1,43 @@
 <script lang="ts">
-	import { POLICIES } from "../../data/policies";
+	const policies = [
+		{
+			title: 'Accident and Incident Policy',
+			link: 'https://docs.google.com/document/d/1o2ek0bSPbg7j_cSOExEiQMZ0VUhson7fZ4yD8xRhe5M/edit?usp=drive_link'
+		},
+		{
+			title: 'Risk Assessment Policy',
+			link: 'https://docs.google.com/document/d/1fXRikis4WDlvmsX8jIgrqV_Yk9v5JHjhb8yq4atUsGg/edit?usp=drive_link'
+		},
+		{
+			title: 'Safer Recruitment Policy',
+			link: '/policy/health-and-safety'
+		},
+		{
+			title: 'Safeguarding policy - ratios, roles and responsibilities',
+			link: 'https://docs.google.com/document/d/1I6g0hgI172sNqn2DQRsxQ_rfb_eUBZw8h1f3EexUMfI/edit?usp=drive_link'
+		},
+		{
+			title: 'Working with Tools Policy',
+			link: 'https://docs.google.com/document/d/1nTmBRCvbsCbNPheq4pECOQnzstJ8bEh007jXnKAnbjc/edit?usp=drive_link'
+		}
+	];
 </script>
 
 <section class="container min-h-[514px] py-3">
 	<h1 class="text-3xl leading-[50px] max-md:text-2xl">Policies</h1>
 	<div class="grid grid-cols-3 max-md:grid-cols-1 gap-3 mt-3">
-		{#each POLICIES as policy}
+		{#each policies as policy}
 			<a href={policy.link}>
-				<div class="w-full max-md:text-sm flex items-center justify-between hover:border-[#054900] border-2 border-transparent transition-all h-full p-4 bg-[#BFFFBA] text-[#054900] rounded-lg">
+				<div
+					class="w-full max-md:text-sm flex items-center justify-between hover:border-[#054900] border-2 border-transparent transition-all h-full p-4 bg-[#BFFFBA] text-[#054900] rounded-lg"
+				>
 					{policy.title}
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24px"
 						viewBox="0 0 24 24"
 						fill="none"
-						 class="min-w-[24px]"
+						class="min-w-[24px]"
 					>
 						<g id="Interface / External_Link">
 							<path

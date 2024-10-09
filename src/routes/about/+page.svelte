@@ -6,8 +6,8 @@
 
 <section id="about" class="container pt-4 overflow-hidden h-full">
 	<div class="flex gap-6 h-full max-md:flex-col">
-		<div class="w-full max-md:w-full h-full flex flex-col gap-5">
-			<div>
+		<div class="w-full max-md:w-full h-full mt-10 flex flex-col gap-5">
+			<div class="space-y-12">
 				<h1
 					class="max-md:leading-[35px] text-center max-md:text-2xl text-3xl leading-[50px] text-[#CF572B] font-semibold mb-3"
 				>
@@ -19,12 +19,12 @@
 						between children and nature, empowering them to learn from the world's greatest teacher
 						- the great outdoors. We believe in nurturing young minds by cultivating a sense of
 						wonder and curiosity, encouraging children to educate themselves in a way that is free,
-						independent, and uninfluenced, teaching them not what to think, but how to think. <br />
+						independent, and uninfluenced, teaching them not what to think, but how to think. <br /><br />
 						Our Forest School is a place where fun and organic learning come together, providing an environment
 						where children can play, explore, and grow in harmony with the natural world. We are committed
 						to helping children reap the profound benefits that outdoor experiences offer, cultivating
 						essential life skills and emotional resilience that are increasingly vital in a world marked
-						by growing mental health challenges among our youth. <br /> The Bee's Knees Forest School
+						by growing mental health challenges among our youth. <br /><br /> The Bee's Knees Forest School
 						is dedicated to creating a space where children can thrive and flourish, unburdened by the
 						constraints of modern life, and where they can develop a deep appreciation for the wonders
 						of nature. Through this mission, we aim to equip the next generation with the tools they
@@ -39,14 +39,14 @@
 
 <section id="team" class="container h-fit scroll-mt-16 block">
 	<h2
-		class="max-md:leading-[36px] text-center max-md:w-full max-md:text-2xl text-3xl leading-[50px] text-[#CF572B] font-semibold my-8"
+		class="max-md:leading-[36px] mb-16 text-center max-md:w-full max-md:text-2xl text-3xl leading-[50px] text-[#CF572B] font-semibold my-8"
 	>
 		Our team of professionals
 	</h2>
-	<div class="space-y-6">
+	<div class="space-y-12">
 		{#each professionals as professional, index}
 			<div
-				class={`flex gap-4 max-md:flex-col-reverse h-full  ${
+				class={`flex gap-10 max-md:flex-col-reverse h-full  ${
 					index % 2 != 0 ? 'md:flex-row-reverse' : ''
 				}`}
 			>
@@ -61,7 +61,7 @@
 					</div>
 					<div class="space-y-2 h-fit">
 						<h1
-							class="max-md:text-2xl max-md:leading-[34px] text-2xl leading-[42px]"
+							class="max-md:text-2xl max-md:leading-[34px] pb-4 text-2xl leading-[42px]"
 							style={`color: ${professional.primaryColor};`}
 						>
 							{professional.name}

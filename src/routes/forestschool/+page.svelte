@@ -79,78 +79,48 @@
 	];
 	const ethos = [
 		{
-			title: 'Nature Connection',
+			title: 'The Foundation',
 			description:
-				'Our clubs place a strong emphasis on connecting children with the natural world. It recognises the importance of nature in nurturing physical, emotional, and intellectual well-being.'
+				'emphasises essential skills that underpin all learning, focusing on personal, social, and emotional well-being. Children build self-confidence, social interaction, and physical health through activities that promote independence, teamwork, and mindfulness.'
 		},
 		{
-			title: 'Child-Led Learning',
+			title: 'The Pathway',
 			description:
-				"We are big advocates of child-led learning, granting children the freedom to explore, experiment, and make decisions about their outdoor activities, fostering independence and decision-making skills. Our approach is inspired by the Latin notion of 'Educare,' which means to nurture and bring out the inherent, divine qualities within each child. "
+				'nurtures crucial skills for learning and understanding the world. Through hands-on experiences, children develop communication, literacy, problem-solving, and environmental stewardship. They engage with numeracy, creative technology, and scientific inquiry, fostering curiosity and critical thinking.'
 		},
 		{
-			title: 'Long-Term Engagement',
+			title: 'The Horizon',
 			description:
-				'We wanted to create opportunities for children to regularly access and have long-term engagement with nature, allowing them to develop a deep and meaningful relationship with the environment over time and over seasons.'
-		},
-		{
-			title: 'Holistic Development',
-			description:
-				"Our ethos promotes holistic development, addressing not only cognitive skills but also physical, social, emotional, and spiritual aspects of a child's growth and well-being."
-		},
-		{
-			title: 'Play and Exploration',
-			description:
-				'Play is a central component of our clubs. We recognise the importance of play as a means of learning, creativity, and personal development. Children are also encouraged to engage in unstructured play and exploration in between activities.'
-		},
-		{
-			title: 'Community and Collaboration',
-			description:
-				'Our clubs aim to promote a sense of community and collaboration among other children. Activities may include group projects and shared experiences that foster social skills and teamwork.'
-		},
-		{
-			title: 'Reflection and Learning from Nature',
-			description:
-				'Children are encouraged to reflect on their experiences in nature and learn from the environment itself. This promotes a sense of stewardship and environmental awareness.'
-		},
-		{
-			title: 'Qualified Educators',
-			description:
-				'Our clubs will always be led by qualified Forest School practitioners who have undergone specific training in this educational approach. Our educators facilitate learning experiences, provide guidance, and ensure safety.'
+				'expands children’s horizons, preparing them to contribute to society and explore future possibilities. Through creative arts, cultural exploration, and philosophical reflection, they build a strong sense of social responsibility, leadership, and self-awareness.'
 		}
 	];
 </script>
 
-<section class="container pt-5 space-y-7">
-	<h1
-		class="text-3xl -mb-4 leading-[42px] text-[#CF572B] font-semibold max-md:text-2xl text-center"
-	>
+<section class="container pt-14 space-y-7">
+	<h1 class="text-3xl leading-[42px] text-[#CF572B] font-semibold max-md:text-2xl text-center">
 		What is a Forest School?
 	</h1>
-	<p class="leading-7 max-md:text-sm max-md:leading-6">
+	<p class="leading-7 mt-4 max-md:text-sm max-md:leading-6">
 		Forest School is a form of outdoor education that emphasises child-led learning. Forest school
 		practitioners provide a non-judgmental environment that supports play exploration and supported
 		risk taking. It is a long term process of frequent and regular sessions in a woodland or natural
 		environment that focuses on holistic development that carries over both in school and in the
 		home.
 	</p>
-	<div class="w-full h-[500px] max-md:h-[250px] max-md:mt-5 rounded-lg overflow-hidden">
+	<div class="w-full h-[500px] max-md:h-[250px] pt-6 max-md:mt-5 rounded-lg overflow-hidden">
 		<img
 			class="w-full h-full object-cover"
-			srcset="https://res.cloudinary.com/dk8kuqbbc/image/upload/f_auto/q_auto/v1698693569/Forest%20school.webp 1024w,
-			https://res.cloudinary.com/dk8kuqbbc/image/upload/w_650,h_364/f_auto/q_auto/v1698693569/Forest%20school.webp 640w,
-			https://res.cloudinary.com/dk8kuqbbc/image/upload/w_320,h_179/f_auto/q_auto/v1698693569/Forest%20school.webp  320w"
-			src="https://res.cloudinary.com/dk8kuqbbc/image/upload/v1698693569/Forest%20school.webp"
+			src="https://cdn.midjourney.com/77a95005-908f-49b1-a4b3-2298541b9ee5/0_2.webp"
 			alt=""
 		/>
 	</div>
 </section>
 
-<section class="container">
+<section class="container space-y-16">
 	<h1 class="text-3xl leading-[42px] text-[#CF572B] font-semibold my-8 max-md:text-2xl text-center">
 		Principles of a Forest School
 	</h1>
-	<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
+	<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10">
 		{#each principles as principle}
 			<div class="pt-2 pb-4 px-5 rounded-lg bg-[#ffe6dd]">
 				<div class="flex items-center gap-4">
@@ -168,7 +138,7 @@
 	</div>
 </section>
 
-<section class="container scroll-mt-16" id="ethos">
+<section class="container scroll-mt-16 space-y-10 pb-20" id="ethos">
 	<h1 class="text-3xl leading-[42px] my-8 max-md:text-2xl text-[#CF572B] font-semibold text-center">
 		The Bees Knees Ethos
 	</h1>
@@ -178,7 +148,7 @@
 		philosophy that seeks to foster holistic development in children of all ages and physical
 		abilities. Here are some key principles and aspects of the Bee's Knees ethos:
 	</p>
-	<ul class="flex gap-2 flex-col mt-2">
+	<ul class="flex gap-5 flex-col mt-2">
 		{#each ethos as etho, index}
 			<li class="mt-4 flex gap-4">
 				<div
@@ -193,9 +163,13 @@
 			</li>
 		{/each}
 	</ul>
+	<p class="max-md:text-sm max-md:leading-6 leading-7">
+		This comprehensive approach ensures that children grow into well-rounded individuals, ready to
+		navigate both personal and academic challenges with confidence and creativity.
+	</p>
 </section>
 
-<section class="container leading-8 scroll-mt-16" id="evidence">
+<!-- <section class="container leading-8 scroll-mt-16" id="evidence">
 	<h1
 		class="text-3xl leading-[42px] mt-8 mb-4 max-md:text-2xl text-[#CF572B] font-semibold text-center"
 	>
@@ -214,4 +188,4 @@
 		reduced risk of myopia as an adult. Sci Rep 11, 6337 (2021).
 		<bt /><br />https://www.littleforestfolk.com/evidence
 	</p>
-</section>
+</section> -->
