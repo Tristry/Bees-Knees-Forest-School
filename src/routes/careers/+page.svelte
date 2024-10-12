@@ -21,29 +21,44 @@
   const sendMessage = async () => {
     try {
       isSubmitting = true;
-      let url = `https://us21.list-manage.com/contact-form/post?u=b332e3f7e0a8487342bdb97bf&form_id=617d131f5880390b8b64872ccc6ca01f`;
+      // Use the form data dynamically to construct the URL
+      let url = `https://mc.us21.list-manage.com/subscribe/landing-page?u=b332e3f7e0a8487342bdb97bf&id=7c80a1c4a8&f_id=00a582e6f0&FNAME=${encodeURIComponent(
+        fullName
+      )}&EMAIL=${encodeURIComponent(email)}&PHONE=${encodeURIComponent(
+        phone
+      )}&MESSAGE=${encodeURIComponent(message)}&QUAL=${encodeURIComponent(
+        qualification
+      )}&b_b332e3f7e0a8487342bdb97bf_318843=&ht=9afa2c4d4d4fd4badcad860e4fe80599c9a388dc%3AMTcyODczNzgzNC4xOTA5&c=dojo_request_script_callbacks.dojo_request_script2`;
+
+      // Create the form data object to be sent with the POST request
       const contactData = {
         fields: {
-          1501: email,
-          1504: fullName,
-          1505: phone,
-          1503: message,
+          1501: email, // Field for email
+          1504: fullName, // Field for full name
+          1505: phone, // Field for phone number
+          1503: message, // Field for message
+          1506: qualification, // Adding qualification field
         },
         subscribe: false,
       };
-      const res = await fetch(url, {
+
+      // Send the POST request with dynamic data
+      await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         mode: "no-cors",
-        body: JSON.stringify(contactData),
       });
+
+      // Handle successful submission
       isSubmitting = false;
       showSuccessMessage = true;
       return { success: true };
     } catch (err) {
+      // Handle errors
       isSubmitting = false;
+      console.error("Error sending message:", err);
       return { success: false };
     }
   };
@@ -63,7 +78,7 @@
   <div class="w-1/2 mt-8 max-md:mt-2 max-md:w-full">
     <div class=" h-full max-w-[600px] max-md:text-left mt-5">
       <h1 class="text-3xl max-md:text-2xl text-[#CF572B] font-semibold">
-        Contact Us
+        Career
       </h1>
       <p class="my-3 max-md:text-sm max-md:leading-6 leading-7">
         If you have any sort of questions, feel free to contact us by filling
@@ -72,15 +87,17 @@
       <form on:submit|preventDefault={sendMessage} class="space-y-4 mt-2">
         <div class="space-y-2">
           <Label for="fullName">What's your qualifications</Label>
-          <Select.Root>
+          <Select.Root
+            onSelectedChange={(e) => (qualification = e?.value + "")}
+          >
             <Select.Trigger>
               <Select.Value placeholder="Qualifications" />
             </Select.Trigger>
             <Select.Content>
-              <Select.Item value="light">Level 1</Select.Item>
-              <Select.Item value="dark">Level 2</Select.Item>
-              <Select.Item value="system">Level 3</Select.Item>
-              <Select.Item value="system">Internship</Select.Item>
+              <Select.Item value="Level 1">Level 1</Select.Item>
+              <Select.Item value="Level 2">Level 2</Select.Item>
+              <Select.Item value="Level 3">Level 3</Select.Item>
+              <Select.Item value="Internship">Internship</Select.Item>
             </Select.Content>
           </Select.Root>
         </div>
