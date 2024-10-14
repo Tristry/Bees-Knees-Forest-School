@@ -137,7 +137,7 @@ export let CLUBS: Club[] = [
     highlightedWord: "Tool Tinkerers",
     description:
       "Get ready to ignite your child's inner builder and adventurer with the \"Tool Tinkerers After-School Club\"! Designed for budding creators aged 8-12, this electrifying program unfolds in the secure outdoor spaces of our school, offering a thrilling journey of discovery through hands-on tool exploration and outdoor crafting. From wielding hammers and saws to crafting birdhouses, sculpting natural art, and tackling mini construction challenges, your child will unleash their creativity and master essential life skills while having a blast. Safety, craftsmanship, and the wonders of nature converge in a dynamic outdoor classroom where every week is a new adventure. Join us and watch your child's imagination come to life in a world of tools, teamwork, and endless fun!",
-    image: "clubs/tool tinkerers.jpg",
+    image: "/clubs/tool_tinkerers.jpg",
     termHighlights: [
       {
         title: "Tool Introduction",

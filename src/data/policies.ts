@@ -1,26 +1,18 @@
 export const POLICIES = [
-    {
-        title: 'Behavior Policy',
-        link: '/policy/behavior'
-    },
-    {
-        title: 'Health and safety policy',
-        link: '/policy/safeguarding'
-    },
-    {
-        title: 'Safer recruitment policy',
-        link: '/policy/health-and-safety'
-    },
-    {
-        title: 'Safeguarding policy - ratios, roles and responsibilities',
-        link: '/policy/complaints'
-    },
-    {
-        title: 'Risk assessment policy',
-        link: '/policy/privacy'
-    },
-    {
-        title: 'Working with tools / bushcraft and fire tools policy',
-        link: '/policy/terms-and-conditions'
-    }
-]
+  {
+    title: "Accident and Incident Policy",
+    link: "https://docs.google.com/document/d/1o2ek0bSPbg7j_cSOExEiQMZ0VUhson7fZ4yD8xRhe5M/edit?usp=drive_link",
+  },
+  {
+    title: "Risk Assessment Policy",
+    link: "https://docs.google.com/document/d/1fXRikis4WDlvmsX8jIgrqV_Yk9v5JHjhb8yq4atUsGg/edit?usp=drive_link",
+  },
+  {
+    title: "Safe Recruitment Policy",
+    link: "https://docs.google.com/document/d/1I6g0hgI172sNqn2DQRsxQ_rfb_eUBZw8h1f3EexUMfI/edit?tab=t.0",
+  },
+  {
+    title: "Working with Tools Policy",
+    link: "https://docs.google.com/document/d/1nTmBRCvbsCbNPheq4pECOQnzstJ8bEh007jXnKAnbjc/edit?usp=drive_link",
+  },
+];

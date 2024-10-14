@@ -81,8 +81,9 @@
         Career
       </h1>
       <p class="my-3 max-md:text-sm max-md:leading-6 leading-7">
-        If you have any sort of questions, feel free to contact us by filling
-        out this form or emailing us at email@gmail.com
+        Passionate about inspiring the next generation through nature? We're
+        always eager to connect with enthusiastic, nature-loving individuals who
+        share our values. Fill out the form below to introduce yourself!
       </p>
       <form on:submit|preventDefault={sendMessage} class="space-y-4 mt-2">
         <div class="space-y-2">
@@ -98,6 +99,7 @@
               <Select.Item value="Level 2">Level 2</Select.Item>
               <Select.Item value="Level 3">Level 3</Select.Item>
               <Select.Item value="Internship">Internship</Select.Item>
+              <Select.Item value="Other">Other</Select.Item>
             </Select.Content>
           </Select.Root>
         </div>
