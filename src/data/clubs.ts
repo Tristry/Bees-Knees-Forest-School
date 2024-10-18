@@ -242,6 +242,6 @@ export let CLUBS: Club[] = [
     primaryColor: "#493800",
     secondaryColor: "#FFF9AC",
     days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
-    price: 320,
+    price: 300,
   },
 ];
