@@ -44,7 +44,7 @@
     </div>
     <div class="py-4 border-t border-white/20">
         <div class="container">
-            <p class="text-white max-md:text-sm">Bee's Knees Forest School 2023</p>
+            <p class="text-white max-md:text-sm">Bee's Knees Forest School 2024</p>
         </div>
     </div>
 </footer>
