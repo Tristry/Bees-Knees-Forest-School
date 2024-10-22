@@ -19,6 +19,9 @@
   let day: string = "";
   let school: string = "";
   let children = 1;
+  let selectedSchool:
+    | { name: string; price: number; days: string[] }
+    | undefined = club?.schools[0];
   $: successAlertOpen = $page.url.searchParams.get("paymentSuccess");
   $: failureAlertOpen = $page.url.searchParams.get("paymentFailure");
 </script>
@@ -43,11 +46,14 @@
       <form
         method="POST"
         use:enhance={({ formElement, formData, action, cancel, submitter }) => {
+          if (!club) return alert("Please select a school");
           if (!school) return alert("Please select a school");
+          console.log(school);
           if (!day) return alert("Please select a day");
           if (!formData.get("children"))
             return alert("Please enter the number of children");
-          formData.set("school", school);
+          formData.set("club", club.title);
+          formData.set("school", selectedSchool?.name || "");
           formData.set("day", day);
           formData.set(
             "successUrl",
@@ -59,6 +65,7 @@
           );
           isSubmitting = true;
           return async ({ result, update }) => {
+            console.log(result);
             isSubmitting = false;
             // @ts-ignore
             goto(result.data.url);
@@ -75,19 +82,24 @@
             >School</Label
           >
           <Select.Root
-            onSelectedChange={(item) => (school = item?.label || "")}
+            onSelectedChange={(item) => {
+              school = item?.label || "";
+              selectedSchool = club.schools.find(
+                (s) => s.name == school.trim()
+              );
+              console.log(school);
+            }}
           >
             <Select.Trigger
               type="button"
               style={`border:1px solid ${club?.primaryColor}`}
               class="rounded-full py-5 "
-              bind:value={school}
             >
               <Select.Value placeholder="Pick a school" />
             </Select.Trigger>
             <Select.Content>
-              {#each CLUBS as club}
-                <Select.Item value={club.id}>{club.title}</Select.Item>
+              {#each club.schools as school}
+                <Select.Item value={school.name}>{school.name}</Select.Item>
               {/each}
             </Select.Content>
           </Select.Root>
@@ -103,7 +115,7 @@
               <Select.Value placeholder="Pick a date" />
             </Select.Trigger>
             <Select.Content>
-              {#each club.days as date}
+              {#each selectedSchool?.days || [] as date}
                 <Select.Item value={date}>{date}</Select.Item>
               {/each}
             </Select.Content>
@@ -122,15 +134,12 @@
         </div>
         <div class="flex justify-between py-3">
           <p style={`color:${club?.primaryColor}`}>Total</p>
-          <p style={`color:${club?.primaryColor}.; font-weight:bold;`}>
+          <p style={`color:${club?.primaryColor}; font-weight:bold;`}>
             {Intl.NumberFormat("en-US", {
               style: "currency",
               currency: "GBP",
             }).format(
-              (CLUBS.find(
-                (club) =>
-                  club.title.toLowerCase().trim() == school.toLowerCase().trim()
-              )?.price || 0) * (children > 0 ? children : 0)
+              (selectedSchool?.price || 0) * (children > 0 ? children : 0)
             )}
           </p>
         </div>

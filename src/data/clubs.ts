@@ -8,8 +8,11 @@ interface Club {
   primaryColor: string;
   secondaryColor: string;
   termFinale: string;
-  days: string[];
-  price: number;
+  schools: {
+    name: string;
+    price: number;
+    days: string[];
+  }[];
 }
 
 interface TermHighlight {
@@ -71,8 +74,28 @@ export let CLUBS: Club[] = [
       "At the end of the term, our young bushcraft experts will put their skills to the test in a wilderness adventure. They'll navigate to a chosen location, build their shelters, and cook their meals over open fires. It's a chance to showcase their newfound abilities and create lasting memories of their bushcraft journey.<br /><br />Join us for a term of thrilling outdoor education, where kids will become confident and skilled in the art of bushcraft, all while fostering a deep appreciation for the natural world. Enrol your child today and let them embark on a journey of discovery, adventure, and self-reliance in the heart of the forest!",
     primaryColor: "#693a2b",
     secondaryColor: "#FFA88C",
-    days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
-    price: 289,
+    schools: [
+      {
+        name: "School A",
+        price: 289,
+        days: ["Monday at 3PM", "Tuesday at 3PM"],
+      },
+      {
+        name: "School B",
+        price: 289,
+        days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
+      },
+      {
+        name: "School C",
+        price: 289,
+        days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
+      },
+      {
+        name: "School D",
+        price: 289,
+        days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
+      },
+    ],
   },
   {
     id: "nature-explorers",
@@ -128,8 +151,28 @@ export let CLUBS: Club[] = [
       "At the end of the term, our Nature Explorers will present their findings and eco-friendly initiatives to the school community. They'll showcase how even within our limited outdoor space, positive changes can be made to benefit our environment.<br /><br />Join us for a term of exploration, education, and action as we utilise our school's outdoor facilities to instil a sense of environmental responsibility and appreciation for the world around us. Enrol your child today and be part of our mission to create environmentally conscious students within our own school's outdoor realm!",
     primaryColor: "#374b35",
     secondaryColor: "#DAE69F",
-    days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
-    price: 300,
+    schools: [
+      {
+        name: "School A",
+        price: 289,
+        days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
+      },
+      {
+        name: "School B",
+        price: 289,
+        days: ["Monday at 3PM", "Wednesday at 3PM"],
+      },
+      {
+        name: "School C",
+        price: 289,
+        days: ["Monday at 3PM", "Tuesday at 3PM"],
+      },
+      {
+        name: "School D",
+        price: 289,
+        days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
+      },
+    ],
   },
   {
     id: "tools-tinkerers",
@@ -184,8 +227,28 @@ export let CLUBS: Club[] = [
       "At the end of the term, our Tool Tinkerers will proudly showcase their creations during an outdoor exhibition. Families and peers will be invited to admire the projects and witness the skills and creativity that have blossomed during the term.<br /><br />Join us for a term of discovery, craftsmanship, and outdoor adventure, all while learning how to safely and responsibly use outdoor tools. Enrol your child today and be part of our Tool Tinkerers, where creativity and outdoor learning go hand in hand!",
     primaryColor: "#5b4c3f",
     secondaryColor: "#DDC0A6",
-    days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
-    price: 310,
+    schools: [
+      {
+        name: "School A",
+        price: 289,
+        days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
+      },
+      {
+        name: "School B",
+        price: 289,
+        days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
+      },
+      {
+        name: "School C",
+        price: 289,
+        days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
+      },
+      {
+        name: "School D",
+        price: 289,
+        days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
+      },
+    ],
   },
   {
     id: "nature-explorers-mini",
@@ -241,7 +304,27 @@ export let CLUBS: Club[] = [
       "At the end of the term, our Nature Explorers Mini Club will host a nature-themed celebration, where students will showcase their favourite discoveries and creations from the term. Families and friends are invited to join in the fun and share in the wonder of young exploration.<br /><br />Join us for a term of outdoor discovery and play, specially crafted for our youngest nature enthusiasts. Enrol your child today and let them experience the joy of exploring and connecting with the natural world right here at school!",
     primaryColor: "#493800",
     secondaryColor: "#FFF9AC",
-    days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
-    price: 320,
+    schools: [
+      {
+        name: "School A",
+        price: 289,
+        days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
+      },
+      {
+        name: "School B",
+        price: 289,
+        days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
+      },
+      {
+        name: "School C",
+        price: 289,
+        days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
+      },
+      {
+        name: "School D",
+        price: 289,
+        days: ["Monday at 3PM", "Tuesday at 3PM", "Wednesday at 3PM"],
+      },
+    ],
   },
 ];

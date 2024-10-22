@@ -8,9 +8,11 @@ export const actions = {
     const formData = await request.formData();
     const school = formData.get("school");
     const day = formData.get("day");
+    const club = formData.get("club");
     const children = formData.get("children");
     const success_url = formData.get("successUrl");
     const cancel_url = formData.get("errorUrl");
+    console.log(CLUBS.find((c) => c.title == school.trim()));
     try {
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
@@ -19,10 +21,12 @@ export const actions = {
             price_data: {
               currency: "gbp",
               product_data: {
-                name: school,
+                name: club,
               },
               unit_amount:
-                CLUBS.find((c) => c.title == school.trim())!.price * 100,
+                CLUBS.find((c) => c.title == club.trim())!.schools.find(
+                  (s) => s.name === school
+                )?.price! * 100,
               tax_behavior: "exclusive",
             },
             quantity: children,
@@ -34,6 +38,7 @@ export const actions = {
         mode: "payment",
         payment_intent_data: {
           metadata: {
+            club,
             school,
             day,
             children,
